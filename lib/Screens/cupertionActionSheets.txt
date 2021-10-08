@@ -1,0 +1,178 @@
+final action = CupertinoActionSheet(
+                            title: Text(
+                              "Add Task",
+                              style: TextStyle(fontSize: 20),
+                            ),
+                            actions: <Widget>[
+                              CupertinoActionSheetAction(
+                                child: Container(
+                                  child: Text(
+                                    'Enter Box',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                ),
+                                isDefaultAction: false,
+                                onPressed: () {
+                                  print("Action 1 is been clicked");
+                                },
+                              ),
+                              CupertinoActionSheetAction(
+                                child: Container(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                          horizontal: 20,
+                                          vertical: 10,
+                                        ),
+                                        child: Text(
+                                          'Number of Box',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          Container(
+                                            color: Colors.white,
+                                            child: Text('1'),
+                                            height: 30,
+                                            width: 30,
+                                          ),
+                                          Container(
+                                            color: Colors.white,
+                                            child: Text('1'),
+                                            height: 30,
+                                            width: 30,
+                                          ),
+                                          Container(
+                                            color: Colors.white,
+                                            child: Text('1'),
+                                            height: 30,
+                                            width: 30,
+                                          ),
+                                          Container(
+                                            color: Colors.white,
+                                            child: Text('1'),
+                                            height: 30,
+                                            width: 30,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                isDefaultAction: false,
+                                onPressed: () {
+                                  print("Action 1 is been clicked");
+                                },
+                              ),
+
+                              CupertinoActionSheetAction(
+                                child: Container(
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      CircleAvatar(
+                                        radius: 20,
+                                        backgroundColor: Colors.red,
+                                      ),
+                                      CircleAvatar(
+                                        radius: 20,
+                                        backgroundColor: Colors.blue,
+                                      ),
+                                      CircleAvatar(
+                                        radius: 20,
+                                        backgroundColor: Colors.yellow,
+                                      ),
+                                      CircleAvatar(
+                                        radius: 20,
+                                        backgroundColor: Colors.orange,
+                                      ),
+                                      CircleAvatar(
+                                        radius: 20,
+                                        backgroundColor: Colors.green,
+                                      ),
+                                      CircleAvatar(
+                                        radius: 20,
+                                        backgroundColor: Colors.grey[300],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                isDefaultAction: false,
+                                onPressed: () {
+                                  print("Action 1 is been clicked");
+                                },
+                              ),
+                              CupertinoActionSheetAction(
+                                child: Container(
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      CircleAvatar(
+                                        radius: 20,
+                                        child: Icon(Icons.gps_off_outlined),
+                                        backgroundColor: Colors.grey[200],
+                                      ),
+                                      CircleAvatar(
+                                        radius: 20,
+                                        child: Icon(Icons.local_atm_outlined),
+                                        backgroundColor: Colors.grey[200],
+                                      ),
+                                      CircleAvatar(
+                                        radius: 20,
+                                        child: Icon(Icons.hail_rounded),
+                                        backgroundColor: Colors.grey[200],
+                                      ),
+                                      CircleAvatar(
+                                        radius: 20,
+                                        child: Icon(Icons.radar_outlined),
+                                        backgroundColor: Colors.grey[200],
+                                      ),
+                                      CircleAvatar(
+                                        radius: 20,
+                                        backgroundColor: Colors.grey[200],
+                                        child: Icon(Icons.golf_course),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                isDefaultAction: false,
+                                onPressed: () {
+                                  print("Action 1 is been clicked");
+                                },
+                              ),
+
+                              // CupertinoActionSheetAction(
+                              //   child: CustomTextFormField(
+                              //     labelText: 'Enter ',
+
+                              //   ),
+                              //   isDestructiveAction: true,
+                              //   onPressed: () {
+                              //     print("Action 2 is been clicked");
+                              //   },
+                              // )
+                            ],
+                            cancelButton: CupertinoActionSheetAction(
+                              child: Text("Save"),
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (_) => TaskDetailScreen()));
+                              },
+                            ),
+                          );
+                          showCupertinoModalPopup(
+                              context: context, builder: (context) => action);
